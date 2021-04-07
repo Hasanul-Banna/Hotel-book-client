@@ -143,11 +143,17 @@ const Home = () => {
             <footer id="contact">
                 <div className="container pt-5 pb-3">
                     <div className="row">
-                        <div className="col-md-5">
+                        <div className="col-md-4">
                             <h5>Contact</h5>
                             <span><FontAwesomeIcon icon={faMapMarker} /> House-no 115/c ( 4th floor ) , Road-no #2 <br /> Mohakhali , Dhaka 1000.</span> <br />
                             <span><FontAwesomeIcon icon={faPhone} /> +880-1712-112255 </span> <br />
                             <span><FontAwesomeIcon icon={faEnvelope} /> Apartment.hunt@gmail.com </span> <br />
+                            <div style={{ fontSize: "30px" }} className="d-flex justify-content-between mt-2">
+                                <FontAwesomeIcon icon={faFacebookSquare} />
+                                <FontAwesomeIcon icon={faInstagramSquare} />
+                                <FontAwesomeIcon icon={faLinkedin} />
+                                <FontAwesomeIcon icon={faYoutube} />
+                            </div>
                         </div>
                         <div className="col-md-2">
                             <h5>Company</h5>
@@ -167,16 +173,16 @@ const Home = () => {
                                 <li>Support</li>
                             </ul>
                         </div>
-                        <div className="col-md-3">
-                            <h5>About</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut repellendus dignissimos blanditiis.</p>
-                            <div style={{ fontSize: "30px" }} className="d-flex justify-content-between mt-2">
-                                <FontAwesomeIcon icon={faFacebookSquare} />
-                                <FontAwesomeIcon icon={faInstagramSquare} />
-                                <FontAwesomeIcon icon={faLinkedin} />
-                                <FontAwesomeIcon icon={faYoutube} />
-                            </div>
-
+                        <div className="col-md-4">
+                            <h5>Subscribe To Our Newsletter</h5>
+                            <form action="https://still-waters-21873.herokuapp.com/subscribe" method="POST">
+                                <div className="form-group d-flex flex-wrap">
+                                    <input type="text" name="firstName" id="first-name" className="w-50 form-control" placeholder="First Name" required />
+                                    <input type="text" name="lastName" id="last-name" className="w-50 form-control" placeholder="Last Name" required /><br/> <br/>
+                                    <input type="email" name="email" id="email" className="w-100 form-control" placeholder="Email" required />
+                                </div>
+                                <button type="submit" >Subscribe Now</button>
+                            </form>
                         </div>
                     </div>
                 </div>

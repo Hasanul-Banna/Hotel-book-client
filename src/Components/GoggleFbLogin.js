@@ -23,21 +23,21 @@ const GoggleFbLogin = () => {
     //       // Handle error
     //     });
     //   }
-    const handleFbSignIn = () => {
-        const provider = new firebase.auth.FacebookAuthProvider();
-        firebase.auth().signInWithPopup(provider)
-            .then(function (result) {
-                // var token = result.credential.accessToken;
-                const { displayName, email } = result.user;
-                const signedInUser = { name: displayName, email: email };
-                setloggedInUser(signedInUser);
-                sessionStorage.setItem('CurrentUser',email);
-                history.replace(from);
-                
-            }).catch(function (error) {
-                console.log(error.message);
-            });
-    }
+    // const handleFbSignIn = () => {
+    //     const provider = new firebase.auth.FacebookAuthProvider();
+    //     firebase.auth().signInWithPopup(provider)
+    //         .then(function (result) {
+    //             // var token = result.credential.accessToken;
+    //             const { displayName, email } = result.user;
+    //             const signedInUser = { name: displayName, email: email };
+    //             setloggedInUser(signedInUser);
+    //             sessionStorage.setItem('CurrentUser',email);
+    //             history.replace(from);
+
+    //         }).catch(function (error) {
+    //             console.log(error.message);
+    //         });
+    // }
 
 
     const handleGoogleSignIn = () => {
@@ -47,7 +47,7 @@ const GoggleFbLogin = () => {
             const { displayName, email } = result.user;
             const signedInUser = { name: displayName, email: email };
             setloggedInUser(signedInUser);
-            sessionStorage.setItem('CurrentUser',email);
+            sessionStorage.setItem('CurrentUser', email);
             history.replace(from);
         }).catch(function (error) {
             console.log(error.message);
@@ -56,8 +56,8 @@ const GoggleFbLogin = () => {
 
     return (
         <div>
-            <button onClick={handleGoogleSignIn} className="rounded-pill  btn-warning"><FontAwesomeIcon icon={faGoogle} /> Login with Goggle</button>
-            <button onClick={handleFbSignIn} className="rounded-pill btn-primary"><FontAwesomeIcon icon={faFacebook} /> Login with Facebook</button>
+            <button onClick={handleGoogleSignIn} className="rounded-pill  btn-warning"><FontAwesomeIcon icon={faGoogle} /> Login with Goggle account?</button>
+            {/* <button onClick={handleFbSignIn} className="rounded-pill btn-primary"><FontAwesomeIcon icon={faFacebook} /> Login with Facebook</button> */}
         </div>
     );
 };
