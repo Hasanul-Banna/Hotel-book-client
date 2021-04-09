@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarker, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faInstagramSquare, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import loader from '../images/icons/loader.gif';
+import MailchimpSubscribe from './MailchimpSubscribe';
 
 const Home = () => {
     const [Hotel, setHotel] = useState([])
@@ -174,15 +175,20 @@ const Home = () => {
                             </ul>
                         </div>
                         <div className="col-md-4">
-                            <h5>Subscribe To Our Newsletter</h5>
-                            <form action="https://still-waters-21873.herokuapp.com/subscribe" method="POST">
-                                <div className="form-group d-flex flex-wrap">
-                                    <input type="text" name="firstName" id="first-name" className="w-50 form-control" placeholder="First Name" required />
-                                    <input type="text" name="lastName" id="last-name" className="w-50 form-control" placeholder="Last Name" required /><br/> <br/>
-                                    <input type="email" name="email" id="email" className="w-100 form-control" placeholder="Email" required />
+                            <h5>Subscribe To Our Newsletter </h5>
+                            {/* <form action="http://localhost:5000/Subscribe" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="firstName" id="first-name" class="form-control" placeholder="First Name" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="lastName" id="last-name" class="form-control" placeholder="Last Name" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" required />
                                 </div>
                                 <button type="submit" >Subscribe Now</button>
-                            </form>
+                            </form> */}
+                            <MailchimpSubscribe/>
                         </div>
                     </div>
                 </div>
